@@ -225,4 +225,7 @@ mod runtime {
 	// Include the custom logic from the pallet-template in the runtime.
 	#[runtime::pallet_index(7)]
 	pub type Template = pallet_template;
+
+	#[runtime::pallet_index(8)] // Choose an available index
+    pub type SimpleGovernance = pallet_simple_governance;
 }

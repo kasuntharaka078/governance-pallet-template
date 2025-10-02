@@ -5928,6 +5928,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "pallet-simple-governance"
+version = "1.0.0"
+dependencies = [
+ "frame-benchmarking",
+ "frame-support",
+ "frame-system",
+ "parity-scale-codec",
+ "scale-info",
+ "sp-core",
+ "sp-io",
+ "sp-runtime",
+]
+
+[[package]]
 name = "pallet-sudo"
 version = "40.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -9471,6 +9485,7 @@ dependencies = [
  "pallet-aura",
  "pallet-balances",
  "pallet-grandpa",
+ "pallet-simple-governance",
  "pallet-sudo",
  "pallet-template",
  "pallet-timestamp",

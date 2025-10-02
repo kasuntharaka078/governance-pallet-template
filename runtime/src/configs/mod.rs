@@ -162,3 +162,17 @@ impl pallet_template::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
 	type WeightInfo = pallet_template::weights::SubstrateWeight<Runtime>;
 }
+
+parameter_types! {
+    pub const MaxDescriptionLength: u32 = 256;
+    pub const DefaultVotingPeriod: BlockNumber = 7 * crate::DAYS; // 7 days in blocks
+    pub const MaxProposalsPerBlock: u32 = 10;
+}
+
+impl pallet_simple_governance::Config for Runtime {
+    type RuntimeEvent = RuntimeEvent;
+    type WeightInfo = pallet_simple_governance::weights::SubstrateWeight<Runtime>;
+    type MaxDescriptionLength = MaxDescriptionLength;
+    type DefaultVotingPeriod = DefaultVotingPeriod;
+    type MaxProposalsPerBlock = MaxProposalsPerBlock;
+}
